@@ -26,17 +26,17 @@ app.use(express.static(__dirname));
 
 app.get('/api/project/:projectId', function(req, res){
     
-    res.send(data);
-	// github.repos.getReadme({
-    //     user: "Devmountain",
-    //     repo: req.params.projectId
-    // }, (err, response) => {
-    //     if(!err){
-    //         res.send(response);
-    //     }  else {
-    //         res.status(500).send("Error retrieving readme from project. Please double check your spelling." + err);
-    //     }
-    // })
+    // res.send(data);
+	github.repos.getReadme({
+        user: "Devmountain",
+        repo: req.params.projectId
+    }, (err, response) => {
+        if(!err){
+            res.send(response);
+        }  else {
+            res.status(500).send("Error retrieving readme from project. Please double check your spelling." + err);
+        }
+    })
 })
 
 app.listen('3001', function(){
