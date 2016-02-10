@@ -30,7 +30,7 @@ app.get('/api/project/:projectId', function(req, res){
 	github.repos.getReadme({
         user: "Devmountain",
         repo: req.params.projectId
-    }, (err, response) => {
+    }, function(err, response){
         if(!err){
             res.send(response);
         }  else {
