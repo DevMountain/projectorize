@@ -1,0 +1,5 @@
+.vscode
+node_modules/
+keys.js
+.DS_Store
+bower_components/

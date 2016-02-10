@@ -1,0 +1,126 @@
+@darkGray: #c9c9c9;
+@lightGray: #e3e3e3;
+@primaryColor: #9ad3de;
+@lowlightColor: #89bdd3;
+
+body,html{
+	margin: 0px;
+	height: 100%;
+}
+
+.left-bar {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	box-shadow: 3px 0px 3px 1px @darkGray;
+	background-color: @primaryColor;
+	li {
+		list-style: none;
+		padding-left: 12px;
+		height: 50px;
+		border: 1px solid @lowlightColor;
+		padding-top: 24px;
+	}
+	li.selected {
+		background-color: @lowlightColor;
+	}
+}
+
+.content-content{
+	flex: 4;
+}
+
+.editable {
+    font-size: 18px;
+    height: 30px;
+    width: 200px;
+}
+
+.step-list {
+    display:flex;
+    min-height: calc(100vh - 12vh);
+    flex-direction: column;
+    margin: 3vh auto;	
+}
+.step-list-item {
+    margin: 15px;
+    margin-left:45px;
+    box-shadow: 3px 2px 3px 1px @darkGray;
+    margin-right:45px;
+    border: 1px solid @darkGray;
+    background-color: @lightGray;
+    &>div{
+        margin-bottom: 6px;
+        padding-left: 8px;
+        padding-right: 8px;
+        &:first-child{
+            padding: 8px;
+            background-color: @lowlightColor;
+        }
+    }
+}
+.bar {
+    height: 6vh;
+    min-height: 40px;
+    background-color: @lightGray;
+    width: 100%;
+    text-align: center;
+    &>button{			
+        border: 0px;			
+        margin: 12px;
+        padding: 8px;
+        font-size: 18px;
+        &:first-child{
+            background-color: @primaryColor;
+        };
+    }
+}
+
+.text {
+	font-size: 22px;
+}
+
+.right-icon {
+	display: flex;
+	flex-direction: row;
+	flex: 8;
+    padding: 6px;
+	&>span{
+		flex: 1;
+	}
+	&>span.text{
+		flex: 11;
+	}
+}
+
+.master {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.content {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+}
+
+.nav-header {
+	height: 40px;
+	padding: 10px;
+	padding-top:15px;
+	background-color: @lightGray;
+	border: 1px solid @darkGray;
+	margin: 0px;
+	font-size: 18px;
+	text-align: center;
+	box-shadow: 0px 2px 3px 1px @darkGray;
+	z-index: 3;
+}
+
+// .loading{
+//     position: fixed;
+//     z-index: 100;
+//     top: 50vh;
+//     left: 50vw;
+// }
