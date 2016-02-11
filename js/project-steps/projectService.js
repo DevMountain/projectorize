@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-angular.module('projectorize').service('projectService', function(){
-    
-})
-=======
 angular.module('projectorize').service('projectService', function($http, $q, $timeout, projectParsingService){
     
     this.getProject = function(projectName) {
@@ -13,9 +8,6 @@ angular.module('projectorize').service('projectService', function($http, $q, $ti
             if(response.status === 200){
                return projectParsingService.parseMarkdownProject(projectName, response.data);
             }
-            throw new Error("Could not find or parse a project with that name")
         })
     }
 })
-
->>>>>>> done

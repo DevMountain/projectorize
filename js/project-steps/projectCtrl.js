@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-angular.module('projectorize').controller('projectCtrl', function($scope){
-    
-=======
 angular.module('projectorize').controller('projectCtrl', function($scope, projectService){
     $scope.isLoading = true;
     $scope.lastTitle = $scope.title;
@@ -29,6 +25,4 @@ angular.module('projectorize').controller('projectCtrl', function($scope, projec
     }
     
     //Shortcut code for quick reload/testing
-    $scope.getProject("devmtzon")
->>>>>>> done
 })

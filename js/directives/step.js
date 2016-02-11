@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 angular.module('projectorize').directive('step', function(){
     return {
         scope: {
@@ -32,4 +30,3 @@ angular.module('projectorize').directive('step', function(){
         }      
     }
 })
->>>>>>> done
