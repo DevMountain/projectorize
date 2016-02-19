@@ -1,11 +1,9 @@
-<div class="nav-header">
-        <input type="text" ng-model="project.title" ng-blur="titleChanged()" class="editable"></input>
-</div>
-<div class="list">
+<section class="project-list">
     <li ng-repeat="part in project.parts.parts track by $index" ng-click="setCurrentPart(part)" ng-class="{selected: part === currentPart}">
-        <div class="right-icon">
-            <span class="text">Part {{$index + 1}}) {{part.part_title}}</span>
-            <span><i class="fa fa-check"></i></span>
+        <div class="project-list-link">
+            <span class="project-list-text">{{part.part_title}}</span>
+            <!--<span><i class="fa fa-check"></i></span>-->
         </div>
     </li>
-</div>
+
+</section>
