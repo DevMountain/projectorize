@@ -69,11 +69,10 @@ input:placeholder-shown {
 
 }
 
-li {
+.project-list>li {
   width: 105px;
   list-style: none;
   cursor: pointer;
-
 }
 
 .project-list-link {
@@ -145,6 +144,15 @@ li {
   font-family: Lato;
   color: #36B3E8;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+}
+.right-icon-footer {
+  background: #CCCCCC;
+}
+.right-icon-footer .text{
+   font-size: 14px;
+}
+.right-icon-header {
+  background: #404041;
 }
 .right-icon > span {
   flex: 1;

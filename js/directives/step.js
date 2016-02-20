@@ -9,14 +9,20 @@ angular.module('projectorize').directive('step', function(){
             $scope.currentIndex = 0;
             $scope.currentInstructions = getCurrentInstructions();
             $scope.currentPrompt = "More"
+            var totalSteps = $scope.data.substeps.length
+            $scope.hasMultipleSteps = totalSteps > 1;
+            
+            var maxIndex = totalSteps - 1;
+            
+            
             
             $scope.toggleVerbosity = function(){
                 //Ternary Operator
-                $scope.currentIndex = $scope.currentIndex === 2 ? 0 : $scope.currentIndex + 1;
+                $scope.currentIndex = $scope.currentIndex === maxIndex ? 0 : $scope.currentIndex + 1;
                 
                 $scope.currentInstructions = getCurrentInstructions();;
             
-                $scope.currentPrompt = $scope.currentIndex === 2 ? "Less" : "More"
+                $scope.currentPrompt = $scope.currentIndex === maxIndex ? "Less" : "More"
                         
             }
             

@@ -1,6 +1,8 @@
-angular.module('projectorize').controller('projectCtrl', function($scope, projectService){
+angular.module('projectorize').controller('projectCtrl', function($scope, projectService, $location){
     $scope.isLoading = true;
     $scope.lastTitle = $scope.title;
+    
+    var path = $location.path();
     
     $scope.getProject = function(projectName){
         projectService.getProject(projectName).then(function(data){
@@ -24,5 +26,9 @@ angular.module('projectorize').controller('projectCtrl', function($scope, projec
         $scope.currentPart = part;
     }
     
-    //Shortcut code for quick reload/testing
+        
+    if(path){
+        path = path.substring(1);
+        $scope.getProject(path);
+    }
 })

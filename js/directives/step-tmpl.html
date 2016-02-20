@@ -1,6 +1,14 @@
-<div class="right-icon">
+<div class="right-icon right-icon-header">
     <span class="text">{{stepNum()}}) {{data.step_title}}</span>
-    <span class="more" ng-click="toggleVerbosity()">{{currentPrompt}}<i class="fa fa-question-circle"></i></span>
+    <span class="more" 
+          ng-click="toggleVerbosity()"
+          ng-show="hasMultipleSteps">{{currentPrompt}}<i class="fa fa-question-circle"></i></span>
 </div>
 <div marked="currentInstructions" class="github"></div>
+<div class="right-icon right-icon-footer">
+    <span class="text">{{stepNum()}}) {{data.step_title}}</span>
+    <span class="more" 
+          ng-click="toggleVerbosity()"
+          ng-show="hasMultipleSteps">{{currentPrompt}}<i class="fa fa-question-circle"></i></span>
+</div>
 </div>
