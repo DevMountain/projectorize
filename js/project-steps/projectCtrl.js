@@ -19,6 +19,7 @@ angular.module('projectorize').controller('projectCtrl', function($scope, projec
         if($scope.project.title !== $scope.lastTitle){
             $scope.lastTitle = $scope.project.title;
             $scope.getProject($scope.lastTitle);
+            $location.path($scope.lastTitle);
         }
     }
     
@@ -27,7 +28,7 @@ angular.module('projectorize').controller('projectCtrl', function($scope, projec
     }
     
         
-    if(path){
+    if(path && path.length > 1){
         path = path.substring(1);
         $scope.getProject(path);
     }
