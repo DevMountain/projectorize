@@ -39,6 +39,7 @@ app.get('/api/project/:projectId', function(req, res){
     })
 })
 
-app.listen('3001', function(){
-	
+var port = '3001';
+app.listen(port, function(){ 
+   console.log('listening on' + port);	
 })
