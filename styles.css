@@ -193,8 +193,9 @@ input:placeholder-shown {
   cursor: pointer;
   margin-left: 10px;
 }
-
 .more {
   cursor: pointer;
-
+}
+step img{
+  max-width: 97.5%;
 }
